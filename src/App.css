@@ -1,0 +1,40 @@
+.APP {
+  /* height: 100%; */
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  background-color: #282c34;
+  min-height: 100vh;
+}
+
+a{
+  text-decoration:none;
+  color:white;
+}
+/* NAVBAR */
+.nav{
+  background:#1a2433
+}
+.nav__container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  /* padding:0px 20px; */
+  width:100%;
+}
+.nav__logo{
+  width:50px
+}
+.container__links{
+  width:100%;
+}
+.nav__links{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+li{
+  margin:1px;
+  list-style:none;
+  text-decoration: none;
+  margin:3px;
+}
