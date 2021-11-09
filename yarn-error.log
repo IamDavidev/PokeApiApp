@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\MGKda\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-router-fom
+  C:\Program Files\nodejs\node.exe C:\Users\MGKda\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-router-dom@5.3.0
 
 PATH: 
   C:\Users\MGKda\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\MGKda\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\MinGW\bin;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Users\MGKda\AppData\Local\Microsoft\WindowsApps;C:\Users\MGKda\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\MGKda\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -14,17 +14,12 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/react-router-fom: Not found
-      at Request.params.callback [as _callback] (C:\Users\MGKda\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
-      at Request.self.callback (C:\Users\MGKda\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
-      at Request.emit (node:events:390:28)
-      at Request.<anonymous> (C:\Users\MGKda\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141855:10)
-      at Request.emit (node:events:390:28)
-      at IncomingMessage.<anonymous> (C:\Users\MGKda\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141777:12)
-      at Object.onceWrapper (node:events:509:28)
-      at IncomingMessage.emit (node:events:402:35)
-      at endReadableNT (node:internal/streams/readable:1343:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  SyntaxError: C:\REACT\app\package.json: Unexpected token } in JSON at position 207
+      at JSON.parse (<anonymous>)
+      at C:\Users\MGKda\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\MGKda\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\MGKda\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
 
 npm manifest: 
   {
@@ -36,9 +31,8 @@ npm manifest:
       "serve": "vite preview"
     },
     "dependencies": {
-      "react": "^17.0.0",
-      "react-dom": "^17.0.0",
-      "react-router-dom": "^6.0.0"
+      "react": "17.0.0",
+      "react-dom": "17.0.0",
     },
     "devDependencies": {
       "@vitejs/plugin-react": "^1.0.0",
@@ -638,14 +632,14 @@ Lockfile:
       picocolors "^1.0.0"
       source-map-js "^0.6.2"
   
-  react-dom@^17.0.0:
-    version "17.0.2"
-    resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
-    integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
+  react-dom@17.0.0:
+    version "17.0.0"
+    resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.0.tgz#f8266e4d9861584553ccbd186d596a1c7dd8dcb4"
+    integrity sha512-OGnFbxCjI2TMAZYMVxi4hqheJiN8rCEVVrL7XIGzCB6beNc4Am8M47HtkvxODZw9QgjmAPKpLba9FTu4fC1byA==
     dependencies:
       loose-envify "^1.1.0"
       object-assign "^4.1.1"
-      scheduler "^0.20.2"
+      scheduler "^0.20.0"
   
   react-refresh@^0.10.0:
     version "0.10.0"
@@ -666,10 +660,10 @@ Lockfile:
     dependencies:
       history "^5.0.3"
   
-  react@^17.0.0:
-    version "17.0.2"
-    resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
-    integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
+  react@17.0.0:
+    version "17.0.0"
+    resolved "https://registry.yarnpkg.com/react/-/react-17.0.0.tgz#ad96d5fa1a33bb9b06d0cc52672f7992d84aa662"
+    integrity sha512-rG9bqS3LMuetoSUKHN8G3fMNuQOePKDThK6+2yXFWtoeTDLVNh/QCaxT+Jr+rNf4lwNXpx+atdn3Aa0oi8/6eQ==
     dependencies:
       loose-envify "^1.1.0"
       object-assign "^4.1.1"
@@ -699,7 +693,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
     integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
   
-  scheduler@^0.20.2:
+  scheduler@^0.20.0:
     version "0.20.2"
     resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
     integrity sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==

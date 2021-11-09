@@ -1,13 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import LoginScreen from '../components/LoginScreen';
-
+import { BrowserRouter as Routes, Route, Switch } from 'react-router-dom';
+import LoginScreen from '../components/LoginScreen'
 const LoginRoute = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LoginScreen />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Switch>
+      <Route path="/login" component={LoginScreen} />
+      </Switch>
+    </Routes>
   );
 };
 
