@@ -1,25 +1,14 @@
-import {BrowserRouter,Routes,Route } from 'react-router-dom'
-import LoginScreen from '../components/LoginScreen'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LoginScreen from '../components/LoginScreen';
 
-
-
-const LoginRoute = () =>{
+const LoginRoute = () => {
   return (
-    <BrowserRouter >
-    <Routes>
-      <Route path="/" element={<LoginScreen/>} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginScreen />} />
       </Routes>
     </BrowserRouter>
-  )
-}
-
-
-
-
-
-
-
-
-
+  );
+};
 
 export default LoginRoute;
