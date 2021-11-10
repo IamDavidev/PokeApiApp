@@ -1,5 +1,5 @@
 import InputLogin from '../components/InputLogin';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const Login = () => {
   return (
     <div className="login_page">
@@ -8,8 +8,12 @@ const Login = () => {
         <InputLogin type="password" pholder="PASSWORD" />
       </div>
       <div className="login_create">
-        <Link to='/'>LOGIN</Link>
-        <Link to='/singup'>CREATE ACCOUNT</Link>
+        <Link to="/" className="btn_login">
+          LOGIN
+        </Link>
+        <Link to="/singup" className="btn_login">
+          CREATE ACCOUNT
+        </Link>
       </div>
     </div>
   );

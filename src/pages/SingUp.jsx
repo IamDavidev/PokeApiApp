@@ -1,7 +1,6 @@
 import LoginTitle from '../components/LoginTitle';
 import { Link } from 'react-router-dom';
-import InputLogin from '../components/InputLogin'
-
+import InputLogin from '../components/InputLogin';
 
 const SignUp = () => {
   return (
@@ -9,14 +8,16 @@ const SignUp = () => {
       <LoginTitle />
       <div className="singup_page_container">
         <form>
-         <InputLogin type='text' pholder="NAME"/>
-          <InputLogin type="email"  pholder="EMAIL" />
-          <InputLogin type="password"  pholder="PASSWORD" />
+          <InputLogin type="text" pholder="NAME" />
+          <InputLogin type="email" pholder="EMAIL" />
+          <InputLogin type="password" pholder="PASSWORD" />
         </form>
       </div>
       <div>
-        <button className="create_signup">create account</button>
-        <Link className="login_singup" to="/login">
+        <Link to="/" className="btn_login">
+          create account
+        </Link>
+        <Link className="btn_login" to="/login">
           Login
         </Link>
       </div>
