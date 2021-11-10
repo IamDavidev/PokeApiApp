@@ -1,50 +1,174 @@
 .APP {
-  /* height: 100%; */
   text-align: center;
   font-size: calc(10px + 2vmin);
-  background-color: #282c34;
   min-height: 100vh;
 }
 
-a{
-  text-decoration:none;
-  color:white;
+a {
+  text-decoration: none;
+  color: white;
 }
+
 /* login screen */
-.login-screen {
-  background-color: #282c34;
-  height: 100%;
+.login_screen,
+.singup_page {
+  background-image: url("/assets/LoginScreen.jpg");
+  background-size: cover;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
+
+.login_title {
+  font-size: calc(10px + 2vmin);
+  color: rgb(15, 220, 235);
+  font-weight: bold;
+  margin-bottom: 40%;
+  margin-top: 0;
+  letter-spacing: 10px;
+  font-family: cursive;
+}
+
+.render_login_container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40%;
+}
+
+.btn_singUp {
+  /* background-color: rgb(231, 231, 231); */
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.btn_login {
+  /* background-color: rgb(15, 220, 235); */
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* singup */
+#name_signup {
+  background: transparent;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+}
+#name_signup:focus {
+  outline: none;
+}
+#name_signup::placeholder {
+  color: #0ff;
+}
+#email_signup {
+  background: transparent;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+}
+#email_signup:focus {
+  outline: none;
+}
+#email_signup::placeholder {
+  color: #0ff;
+}
+#password_signup {
+  background: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+
+}
+#password_signup:focus {
+  outline: none;
+}
+#password_signup::placeholder {
+  color: #0ff;
+}
+.create_signup {
+  background: fixed;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+}
+
+.login_singup{
+  display:block;
+  background: fixed;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+}
+
 /* NAVBAR */
-.nav{
-  background:#1a2433
+.nav {
+  background: #1a2433
 }
-.nav__container{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   /* padding:0px 20px; */
-  width:100%;
+  width: 100%;
 }
-.nav__logo{
-  width:50px
+
+.nav__logo {
+  width: 50px
 }
-.container__links{
-  width:100%;
+
+.container__links {
+  width: 100%;
 }
-.nav__links{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+
+.nav__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-li{
-  margin:1px;
-  list-style:none;
+
+li {
+  margin: 1px;
+  list-style: none;
   text-decoration: none;
-  margin:3px;
+  margin: 3px;
 }
+
+/* media query  
+  .btn_singUp:hover {
+    background-color: rgb(2, 54, 83);
+    color: rgb(231, 231, 231);
+  } */
