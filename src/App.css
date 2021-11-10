@@ -4,14 +4,25 @@
   min-height: 100vh;
 }
 
+/* GLOBALS */
 a {
   text-decoration: none;
   color: white;
 }
 
+input,
+select,
+textarea,
+button {
+  color: #000000;
+  background-color: #1f1f1f;
+  border-color: 1px solid #1f1f1f;
+}
+
 /* login screen */
 .login_screen,
-.singup_page {
+.singup_page,
+.login_page {
   background-image: url("/assets/LoginScreen.jpg");
   background-size: cover;
   height: 100vh;
@@ -64,7 +75,7 @@ a {
 }
 
 /* singup */
-#name_signup {
+.input_signup {
   background: transparent;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -73,43 +84,15 @@ a {
   font-size: calc(10px + 2vmin);
   color: rgb(0, 0, 0);
 }
-#name_signup:focus {
-  outline: none;
-}
-#name_signup::placeholder {
-  color: #0ff;
-}
-#email_signup {
-  background: transparent;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  padding: 10px;
-  font-weight: bold;
-  font-size: calc(10px + 2vmin);
-  color: rgb(0, 0, 0);
-}
-#email_signup:focus {
-  outline: none;
-}
-#email_signup::placeholder {
-  color: #0ff;
-}
-#password_signup {
-  background: none;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  padding: 10px;
-  font-weight: bold;
-  font-size: calc(10px + 2vmin);
-  color: rgb(0, 0, 0);
 
-}
-#password_signup:focus {
+.input_signup:focus {
   outline: none;
 }
-#password_signup::placeholder {
-  color: #0ff;
+
+.input_signup::placeholder {
+  color: rgb(0, 0, 0);
 }
+
 .create_signup {
   background: fixed;
   margin-top: 10px;
@@ -121,8 +104,8 @@ a {
   color: rgb(0, 0, 0);
 }
 
-.login_singup{
-  display:block;
+.login_singup {
+  display: block;
   background: fixed;
   margin-top: 10px;
   margin-bottom: 10px;

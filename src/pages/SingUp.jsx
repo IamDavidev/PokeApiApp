@@ -1,15 +1,17 @@
 import LoginTitle from '../components/LoginTitle';
 import { Link } from 'react-router-dom';
+import InputLogin from '../components/InputLogin'
+
+
 const SignUp = () => {
-  console.log('singup');
   return (
     <div className="singup_page">
       <LoginTitle />
       <div className="singup_page_container">
         <form>
-          <input type="text" id="name_signup" placeholder="Name" />
-          <input type="email" id="email_signup" placeholder="EMAIL" />
-          <input type="password" id="password_signup" placeholder="PASSWORD" />
+         <InputLogin type='text' pholder="NAME"/>
+          <InputLogin type="email"  pholder="EMAIL" />
+          <InputLogin type="password"  pholder="PASSWORD" />
         </form>
       </div>
       <div>
