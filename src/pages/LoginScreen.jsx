@@ -4,7 +4,7 @@ import LoginTitle from '../components/LoginTitle';
 const LoginScreen = () => {
   return (
     <div className="login_screen">
-      <LoginTitle />
+      <LoginTitle title='Login'  />
       <div className="render_login_container">
         <Link className="btn_login" to="/singup">
           Sing up
@@ -13,12 +13,12 @@ const LoginScreen = () => {
           Login
         </Link>
       </div>
-      <footer>
+      <div className='footer_login'>
         <p>
           © 2020 Copyright:{' '}
-          <a href="https://github.com/L-David-T">David Lezama</a>
+          <a href="https://github.com/L-David-T" target='_blanck'>David Lezama</a>
         </p>
-      </footer>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
-const LoginTitle = () => {
+const LoginTitle = ({title}) => {
   return (
     <div className="login_title">
-      <h1>LOGIN</h1>
+      <h1>{title}</h1>
     </div>
   );
 };
