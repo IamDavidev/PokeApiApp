@@ -15,7 +15,7 @@ a {
 .login_screen,
 .singup_page,
 .login_page {
-  background-image: url("/assets/LoginScreen.jpg");
+  /* background-image: url("/assets/LoginScreen.jpg"); */
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -82,7 +82,7 @@ a {
 }
 
 .input_signup::placeholder {
-  color: rgb(0, 0, 0);
+  color: rgb(0, 26, 255);
 }
 
 /* 

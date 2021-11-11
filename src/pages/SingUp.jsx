@@ -14,10 +14,10 @@ const SignUp = () => {
         </form>
       </div>
       <div className='account_created'>
-        <Link to="/" className="btn_login">
+        <Link to="/home" className="btn_login">
           create account
         </Link>
-        <Link className="btn_login" to="/login">
+        <Link className="btn_login" to="/logout">
           Login
         </Link>
       </div>

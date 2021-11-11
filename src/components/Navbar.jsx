@@ -1,6 +1,11 @@
 import logo from '../logo.svg';
-import { Link } from 'react-router-dom';
+import { NavLink, Link, useHistory } from 'react-router-dom';
 const Navbar = () => {
+  const history = useHistory();
+  const handleLogout = () => {
+    // localStorage.removeItem('token');
+    history.push('/login');
+  };
   return (
     <div className="nav">
       <nav className="nav__container">
@@ -10,16 +15,16 @@ const Navbar = () => {
         <div className="container__links">
           <ul className="nav__links">
             <li>
-              <Link to="/mens">Mens</Link>
+              <NavLink to="/home">HOME</NavLink>
             </li>
             <li>
-              <Link to="/womand">Womand</Link>
+              <NavLink to="/womand">***</NavLink>
             </li>
             <li>
-              <Link to="/login"> Login</Link>
+              <Link to="/login"> Logout</Link>
             </li>
             <li>
-              <Link to="/user">User</Link>
+              <NavLink to="/user">User</NavLink>
             </li>
           </ul>
         </div>
