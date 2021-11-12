@@ -1,17 +1,16 @@
-import usePoke from "../hooks/usePoke";
+import GetPokemons from '../services/GetPokemons';
+// import GeTPokemons from '../services/GetPokemons';
+
+// import pokemons from "../services/GetPokemons";
+// GetPokemons
 const Home = () => {
-  const pokemons = usePoke();
-console.log(pokemons);
+  const pokemons = GetPokemons(10);
+  console.log(pokemons);
+
   return (
     <div>
       <h1>Home</h1>
-    {
-      pokemons.map(poke=>(
-        <a href={poke.url}>
-        {poke.name}
-        </a>
-      ))
-    }
+      
     </div>
   );
 };
