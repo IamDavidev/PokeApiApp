@@ -1,18 +1,11 @@
-import GetPokemons from '../services/GetPokemons';
-// import GeTPokemons from '../services/GetPokemons';
-
-// import pokemons from "../services/GetPokemons";
-// GetPokemons
+import GetPokemons from "../services/GetPokemons";
 const Home = () => {
-  const pokemons = GetPokemons(10);
-  console.log(pokemons);
-
-  return (
+  console.log(GetPokemons())
+  return ( 
     <div>
       <h1>Home</h1>
-      
     </div>
-  );
+  )
 };
 
 export default Home;

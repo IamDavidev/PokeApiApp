@@ -1,21 +1,21 @@
-import {useEffect, useState} from 'react';
-// get  pokemons
-const GetPokemon = async (id) => {
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-    .then((res) => res.json())
-    .then((data) => {
-      return data;
-    });
-  return res;
-};
-const GetPokemons =  (pokemons) =>{
-  const [pokemonsList, setPokemonsList] = useState([]);
-  useEffect(async () => {
-  for(let i = 1; i <= pokemons; i++){
-   await GetPokemon(i).then((data) => setPokemonsList([...pokemonsList, data]));
-  }
-  }, [pokemons]);
-  return pokemonsList;
-}
+import {useState, useEffect} from 'react' 
 
-export default GetPokemons;
+const Getpokemons = () => {
+const [pokemons, setPokemons] = useState([])
+const pokemon= async  (id)=>{
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+    .then(response => response.json())
+    .then(data => {
+      // console.log(data);
+        setPokemons([...pokemons, data])
+    })
+}
+const FetchPokemons = ()=>{
+  for(let i=1; i<=10; i++){
+    pokemon(i)
+  }
+}
+// FetchPokemons()
+return pokemons
+}
+export default Getpokemons
