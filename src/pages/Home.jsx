@@ -1,51 +1,54 @@
-// import urlPokemon from "../helpers/GetPokemonsURL";
-import { useState, useEffect } from 'react';
-const Home = () => {
-  const [pokemons, setPokemons] = useState([]);
-  const [loadmore, setLoadmore] = useState(
-    'https://pokeapi.co/api/v2/pokemon?limit=50'
-  );
-  const getPokmons = async () => {
-    const reponse = await fetch(loadmore)
-      .then((rew) => rew.json())
-      .then((data) => data);
+import React, { useEffect, useState } from 'react'
+// import PokemonThumb from './components/PokemonThumb'
+// import PokemonDetails from './components/PokemonDetails'
 
-    setLoadmore(reponse.next);
+const App = () => {
 
-    function createPokemons(pokemons) {
-      pokemons.forEach(async (pokemon) => {
-        const response = await fetch(
-          `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
-        ).then((data) => data.json());
-        setPokemons((currentList) => [...currentList, response]);
-      });
+   const[allPokemons, setAllPokemons] = useState([])
+   const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=20')
+
+  const getAllPokemons = async () => {
+    const res = await fetch(loadMore)
+    const data = await res.json()
+
+    setLoadMore(data.next)
+
+    function createPokemonObject(results)  {
+      results.forEach( async pokemon => {
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
+        const data =  await res.json()
+        setAllPokemons( currentList => [...currentList, data])
+        await allPokemons.sort((a, b) => a.id - b.id)
+      })
     }
+    createPokemonObject(data.results)
+  }
 
-    createPokemons(reponse.results);
-    // await console.log(pokemons);
-  };
+ useEffect(() => {
+  getAllPokemons()
+ }, [])
 
-  useEffect(() => {
-    getPokmons();
-    // getPokmons();
-  }, []);
-  console.log(pokemons);
   return (
-    <div>
-      <h1>Home</h1>
-      <button className="load-more" onClick={() => getPokmons()}>
-        Load more
-      </button>
-      {
-        pokemons.map((pokemon)=>{
-          <div> 
-          <p>{pokemon.name}</p>
-          <p>name</p>
-          </div>
-        })
-      }
+    <div className="app-contaner">
+      <h1>Pokemon Evolution</h1>
+      <div className="pokemon-container">
+        <div className="all-container">
+          {allPokemons.map( (pokemonStats, index) => 
+          <p>{pokemonStats.name}</p>
+            // <PokemonThumb
+            //   key={index}
+            //   id={pokemonStats.id}
+            //   image={pokemonStats.sprites.other.dream_world.front_default}
+            //   name={pokemonStats.name}
+            //   type={pokemonStats.types[0].type.name}
+            // />
+            )}
+          
+        </div>
+          <button className="load-more" onClick={() => getAllPokemons()}>Load more</button>
+      </div>
     </div>
   );
-};
+}
 
-export default Home;
+export default App
