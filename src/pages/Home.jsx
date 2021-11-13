@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react'
-// import PokemonThumb from './components/PokemonThumb'
-// import PokemonDetails from './components/PokemonDetails'
-
+// import usePoke from '../hooks/usePoke'
+import {useState,useEffect} from 'react'
 const App = () => {
 
    const[allPokemons, setAllPokemons] = useState([])
    const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=20')
-
+    // const [next, setNext] =usePoke()
   const getAllPokemons = async () => {
     const res = await fetch(loadMore)
     const data = await res.json()
@@ -23,7 +21,8 @@ const App = () => {
     }
     createPokemonObject(data.results)
   }
-
+  // console.log(next);
+console.log(allPokemons);
  useEffect(() => {
   getAllPokemons()
  }, [])
@@ -34,14 +33,11 @@ const App = () => {
       <div className="pokemon-container">
         <div className="all-container">
           {allPokemons.map( (pokemonStats, index) => 
-          <p>{pokemonStats.name}</p>
-            // <PokemonThumb
-            //   key={index}
-            //   id={pokemonStats.id}
-            //   image={pokemonStats.sprites.other.dream_world.front_default}
-            //   name={pokemonStats.name}
-            //   type={pokemonStats.types[0].type.name}
-            // />
+            <div>
+              <p>{pokemonStats.name}</p>
+              <img src={pokemonStats.sprites.other.dream_world.front_default} alt={pokemonStats.name} />
+            </div>
+           
             )}
           
         </div>
