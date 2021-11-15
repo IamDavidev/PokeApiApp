@@ -13,20 +13,14 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </div>
         <div className="container__links">
-          <ul className="nav__links">
-            <li>
-              <NavLink to="/home">HOME</NavLink>
-            </li>
-            <li>
-              <NavLink to="/womand">***</NavLink>
-            </li>
-            <li>
-              <Link to="/login"> Logout</Link>
-            </li>
-            <li>
-              <NavLink to="/user">User</NavLink>
-            </li>
-          </ul>
+          <div className="pokemons_links">
+            <NavLink to="/home">POKEMONS</NavLink>
+            <NavLink to="/womand">VALLAS</NavLink>
+            <Link to="/login">USER</Link>
+          </div>
+          <div className="login_link">
+            <NavLink to="/user">LOGIN</NavLink>
+          </div>
         </div>
       </nav>
     </div>

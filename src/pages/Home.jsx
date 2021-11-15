@@ -1,8 +1,5 @@
-
-
 import { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
 
 const App = () => {
   const [allPokemons, setAllPokemons] = useState([]);
@@ -29,7 +26,7 @@ const App = () => {
     createPokemonObject(data.results);
   };
   // console.log(next);
-  console.log(allPokemons);
+  // console.log(allPokemons);
   useEffect(() => {
     getAllPokemons();
   }, []);
@@ -50,9 +47,7 @@ const App = () => {
                 />
                 <time>{pokemonStats.base_experience}</time>
               </div>
-              <Link to={`/pokemon/${pokemonStats.name}`} >
-              view info ...
-              </Link>
+              <Link to={`/pokemon/${pokemonStats.name}`}>view info ...</Link>
             </div>
           ))}
         </div>

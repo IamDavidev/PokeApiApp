@@ -2,7 +2,8 @@ import { useParams } from 'react-router';
 import { useHistory } from 'react-router-dom';
 const PokemonScreen = () => {
     const history = useHistory();
-  const name = useParams();
+  // const id = useParams;
+  // console.log(id);
   const handleBack = () => {
     history.goBack();
   };
