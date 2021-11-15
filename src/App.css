@@ -111,6 +111,7 @@ h3 {
 
 /* NAVBAR */
 .nav {
+  position: relative;
   background: #141414;
   color:#0ff
 }

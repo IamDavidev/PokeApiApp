@@ -55,7 +55,6 @@ const Pokemons = () => {
       <button className="load_more" onClick={() => getAllPokemons()}>
         Load more
       </button>
-      <Link to="/berries">Home</Link>
     </div>
   );
 };

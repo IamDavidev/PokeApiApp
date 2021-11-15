@@ -14,12 +14,13 @@ const Navbar = () => {
         </div>
         <div className="container__links">
           <div className="pokemons_links">
-            <NavLink to="/home">POKEMONS</NavLink>
+            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/pokemons">Pokemons</NavLink>
             <NavLink to="/berries">Berries</NavLink>
             <Link to="/login">USER</Link>
           </div>
           <div className="login_link">
-            <NavLink to="/user">LOGIN</NavLink>
+            <NavLink to="/login">LOGIN</NavLink>
           </div>
         </div>
       </nav>

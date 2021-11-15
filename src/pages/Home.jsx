@@ -1,5 +1,5 @@
 const Home = () => {
-retun (
+return (
   <h1>
     Welcome to the Home page!
   </h1>
