@@ -190,8 +190,17 @@ li {
   color: #0ff;
   margin:15px;
 }
+/* Pokemon Screeen  */
 
 
+.character_screen{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh ;
+  background-color: #000;
+}
 /* DESKTOP */
 
 

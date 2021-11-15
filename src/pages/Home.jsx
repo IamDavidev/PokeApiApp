@@ -1,5 +1,9 @@
-// import usePoke from '../hooks/usePoke'
+
+
 import { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom'
+
+
 const App = () => {
   const [allPokemons, setAllPokemons] = useState([]);
   const [loadMore, setLoadMore] = useState(
@@ -46,6 +50,9 @@ const App = () => {
                 />
                 <time>{pokemonStats.base_experience}</time>
               </div>
+              <Link to={`/pokemon/${pokemonStats.name}`} >
+              view info ...
+              </Link>
             </div>
           ))}
         </div>
