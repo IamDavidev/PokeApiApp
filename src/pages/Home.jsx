@@ -50,7 +50,7 @@ const App = () => {
           ))}
         </div>
       </div>
-      <button className="load-more" onClick={() => getAllPokemons()}>
+      <button className="load_more" onClick={() => getAllPokemons()}>
         Load more
       </button>
     </div>
