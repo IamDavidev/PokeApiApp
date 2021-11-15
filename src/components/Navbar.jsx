@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="container__links">
           <div className="pokemons_links">
             <NavLink to="/home">POKEMONS</NavLink>
-            <NavLink to="/womand">VALLAS</NavLink>
+            <NavLink to="/berries">Berries</NavLink>
             <Link to="/login">USER</Link>
           </div>
           <div className="login_link">
