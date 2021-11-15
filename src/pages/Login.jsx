@@ -2,10 +2,7 @@ import InputLogin from '../components/InputLogin';
 import { Link, useHistory } from 'react-router-dom';
 import LoginTitle from '../components/LoginTitle';
 const Login = () => {
-  // const history = useHistory();
-  // const handleLogin = () => {
-  //   history.push('/home');
-  // };
+  
   return (
     <div className="login_page">
       <div className="loger_title">
