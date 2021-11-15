@@ -2,6 +2,7 @@
   text-align: center;
   font-size: calc(10px + 2vmin);
   min-height: 100vh;
+  background-color: #000000;
 }
 
 /* GLOBALS */
@@ -10,7 +11,14 @@ a {
   color: white;
 }
 
-
+h2 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #0ff;
+}
+h3{
+  color:#1a2433;
+}
 /* login screen */
 .login_screen,
 .singup_page,
@@ -85,18 +93,6 @@ a {
   color: rgb(0, 26, 255);
 }
 
-/* 
-.btn_login {
-  background: fixed;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  padding: 10px;
-  font-weight: bold;
-  font-size: calc(10px + 2vmin);
-  color: rgb(0, 0, 0);
-} */
-
 .btn_login {
   display: block;
   background: fixed;
@@ -120,7 +116,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding:0px 20px; */
   width: 100%;
 }
 
@@ -150,6 +145,40 @@ li {
     background-color: rgb(2, 54, 83);
     color: rgb(231, 231, 231);
   } */
+/*  */
+/* CARD POKEMON */
+/* .app_contaner {
+  border: 1px solid wheat;
+  border-radius: 10px;
+  display: flex;
+} */
+.center_pokemons{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.all_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+}
+.render_card_pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  margin: 10px;
+  border: 1px solid rgb(0, 224, 253);
+}
+
+.img_pokemon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
 
 /* DESKTOP */
 
@@ -214,6 +243,7 @@ li {
     width: 400px;
     display: block;
   }
+
   .account_created {
     grid-column-start: 2;
     grid-row-start: 3;
@@ -222,7 +252,8 @@ li {
     align-items: center;
     flex-direction: column;
   }
-  .login_container{
+
+  .login_container {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -231,7 +262,8 @@ li {
     align-items: center;
     flex-direction: column;
   }
-  .login_create{
+
+  .login_create {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
@@ -240,7 +272,8 @@ li {
     align-items: center;
     flex-direction: column;
   }
-  .loger_title{
+
+  .loger_title {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -248,5 +281,9 @@ li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  .all_container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr  ;
   }
 }
