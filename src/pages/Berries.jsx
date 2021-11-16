@@ -23,6 +23,7 @@ const Berries = () => {
         setAllBerries((prevBerries) => [...prevBerries, data]);
         await allBerries.sort((a, b) => a.id - b.id);
         await console.log(allBerries);
+        
       });
 
     }
@@ -45,7 +46,7 @@ const Berries = () => {
         ))}
       </ul>
     </div>
-    
+
   );
 };
 

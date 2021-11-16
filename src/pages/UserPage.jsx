@@ -1,11 +1,16 @@
+import { useContext } from 'react';
 import UserContext from '../Context/UserContext'
 
 const UserPage = () => {
   const {user,setUser} = useContext(UserContext)
+  // console.log(user);
   return (
     <div>
      {
-       user ? <h1>{user.name}</h1> : <h1>No user</h1>
+       
+         (user === null) ? <h1>No user</h1>
+          : <h1>userk</h1>
+        
      }
     </div>
   );

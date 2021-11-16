@@ -22,14 +22,13 @@ const SignUp = () => {
   return (
     <div className="singup_page">
       <LoginTitle title="sing up" />
-      {
-        !user ? (
-          <div className="singup">
+      {!user ? (
+        <>
           <div className="signup_page_container">
             <form onSubmit={HandleLogin}>
-              <InputLogin id="name" type="text" pholder="NAME" />
-              <InputLogin name="email" type="email" pholder="EMAIL" />
-              <InputLogin name="password" type="password" pholder="PASSWORD" />
+              <InputLogin required id="name" type="text" pholder="NAME" />
+              <InputLogin required id="email" type="email" pholder="EMAIL" />
+              <InputLogin required id="password" type="password" pholder="PASSWORD" />
               <button className="btn_login">CREATE ACCOUNT</button>
             </form>
           </div>
@@ -38,12 +37,10 @@ const SignUp = () => {
               Login
             </Link>
           </div>
-        </div>
-        ) : (
-          <h1>hola xdxd</h1>
-        )
-      }
-     
+        </>
+      ) : (
+        <h1>hola xdxd</h1>
+      )}
     </div>
   );
 };
