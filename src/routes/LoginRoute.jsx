@@ -10,7 +10,7 @@ const LoginRoute = () => {
       <Switch>
         <Route exact path="/login" component={LoginScreen} />
         <Route exact path="/singup" component={SignUp} />
-        <Route exact path="/logout" component={Login} />
+        {/* <Route exact path="/logged" component={Login} /> */}
       </Switch>
     </Routes>
   );

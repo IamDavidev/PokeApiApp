@@ -5,14 +5,14 @@ import UserContext from '../Context/UserContext';
 import { useContext } from 'react';
 const Login = () => {
   const {user, setUser} = useContext(UserContext);
-  
+  console.log(user);
   return (
     <div className="login_page">
       <div className="loger_title">
       <LoginTitle title="app react"/>
       </div>
       {
-        user.name ? 
+        user.name === '' ? 
         <>
       <div className="login_container">
         <InputLogin type="email" pholder="EMAIL" />

@@ -16,6 +16,7 @@ const AppRoute = () => {
         <Route exact path="/berries" component={Berries} />
         <Route exact path="/user" component={UserPage} />
         <Route exact path="/pokemon/:id" component={PokemonScreen} />
+        <Route exact path="/logged" component={Login} />
         <Redirect to="/login" />
       </Switch>
     </>

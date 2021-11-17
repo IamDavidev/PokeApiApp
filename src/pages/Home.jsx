@@ -5,8 +5,19 @@ import UserContext from '../Context/UserContext';
 const Home = () => {
   const {user, setUser} = useContext(UserContext);
   // console.log(user.name);
+  
   return (
-    user.name !== '' ? <h1>Welcome {user.name}</h1> : <Link to="/login">Login</Link>
+    user.name !== '' ?(  
+      <div className="container">
+    <h1>Welcome {user.name}</h1> 
+    <Link className='btn_all' to="/user">Profile</Link>
+    <btn className='btn_all'  to="/logout">
+      hola como estas {user.name}
+    </btn>
+  </div>
+
+    ) 
+    : <Link to="/login">Login</Link>
   );
 };
 

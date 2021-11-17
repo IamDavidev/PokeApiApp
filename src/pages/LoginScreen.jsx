@@ -9,7 +9,7 @@ const LoginScreen = () => {
         <Link className="btn_login" to="/singup">
           Sing up
         </Link>
-        <Link className="btn_login" to="/logout">
+        <Link className="btn_login" to="/logged">
           Login
         </Link>
       </div>
