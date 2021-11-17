@@ -4,7 +4,13 @@ import UserContext from './Context/UserContext';
 import LoginRoute from './routes/LoginRoute';
 // import AppRoute from './routes/AppRoute'
 function App() {
-  const [stateInitial, setStateInitial] = useState(null);
+  const [stateInitial, setStateInitial] = useState({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    isLoggedIn: false,
+  });
   return (
     <UserContext.Provider
       value={{ user: stateInitial, setUser: setStateInitial }}

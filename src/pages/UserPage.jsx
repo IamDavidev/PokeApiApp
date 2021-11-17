@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import UserContext from '../Context/UserContext'
 
 const UserPage = () => {
-  const {user,setUser} = useContext(UserContext)
+  const {user,setUser} = useContext(UserContext) || 'hola'
   // console.log(user);
   return (
     <div>

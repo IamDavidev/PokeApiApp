@@ -10,25 +10,27 @@ const SignUp = () => {
     evt.preventDefault();
     const name = evt.target.elements[0].value;
     const email = evt.target.elements[1].value;
-    const pass = evt.target.elements[2].value;
+    const password = evt.target.elements[2].value;
     const userProfile = {
       name,
       email,
-      pass,
+      password,
+      confirmPassword: password,
+      isLoggedIn: true,
     };
     setUser(userProfile);
   };
-  console.log(user);
+  console.log(user.name);
   return (
     <div className="singup_page">
       <LoginTitle title="sing up" />
-      {!user ? (
+      {user.name === '' ? (
         <>
           <div className="signup_page_container">
             <form onSubmit={HandleLogin}>
-              <InputLogin required id="name" type="text" pholder="NAME" />
-              <InputLogin required id="email" type="email" pholder="EMAIL" />
-              <InputLogin required id="password" type="password" pholder="PASSWORD" />
+              <InputLogin id="name" type="text" pholder="NAME" />
+              <InputLogin id="email" type="email" pholder="EMAIL" />
+              <InputLogin id="password" type="password" pholder="PASSWORD" />
               <button className="btn_login">CREATE ACCOUNT</button>
             </form>
           </div>
@@ -39,7 +41,9 @@ const SignUp = () => {
           </div>
         </>
       ) : (
-        <h1>hola xdxd</h1>
+        <div className="signup_page_container">
+          <h1>hola xdxd</h1>
+        </div>
       )}
     </div>
   );

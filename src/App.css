@@ -113,7 +113,7 @@ h3 {
 .nav {
   position: relative;
   background: #141414;
-  color:#0ff
+  color: #0ff
 }
 
 .nav__container {
@@ -133,16 +133,17 @@ h3 {
   align-items: center;
   width: 100%;
 }
-.pokemons_links{
-  display:flex;
+
+.pokemons_links {
+  display: flex;
   width: 30%;
   justify-content: space-around;
-  color:#0ff
+  color: #0ff
 }
 
 
 .login_link {
-  width:60%;
+  width: 60%;
   display: flex;
   justify-content: flex-end;
 }
@@ -155,18 +156,6 @@ li {
   margin: 3px;
 }
 
-/* media query  
-  .btn_singUp:hover {
-    background-color: rgb(2, 54, 83);
-    color: rgb(231, 231, 231);
-  } */
-/*  */
-/* CARD POKEMON */
-/* .app_contaner {
-  border: 1px solid wheat;
-  border-radius: 10px;
-  display: flex;
-} */
 .center_pokemons {
   width: 100%;
   display: flex;
@@ -201,19 +190,21 @@ li {
   padding: 10px;
   border-radius: 10px;
   color: #0ff;
-  margin:15px;
+  margin: 15px;
 }
+
 /* Pokemon Screeen  */
 
 
-.character_screen{
+.character_screen {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh ;
+  height: 100vh;
   background-color: #000;
 }
+
 /* DESKTOP */
 
 
