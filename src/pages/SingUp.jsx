@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import InputLogin from '../components/InputLogin';
 import { useContext } from 'react';
 import UserContext from '../Context/UserContext';
-
+import {useHistory} from 'react-router-dom'
 const SignUp = () => {
   const { user, setUser } = useContext(UserContext);
+  const History = useHistory();
   const HandleLogin = (evt) => {
     evt.preventDefault();
     const name = evt.target.elements[0].value;
@@ -19,6 +20,7 @@ const SignUp = () => {
       isLoggedIn: true,
     };
     setUser(userProfile);
+    History.push('/home');
   };
   console.log(user.name);
   return (

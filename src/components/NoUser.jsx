@@ -8,7 +8,7 @@ const NoUser = (props)=>{
     console.log(props);
     return (
         <div className="no-user">
-            <h1>{'No user'}</h1>
+            <h2>{'No user'}</h2>
             <p>Please login to view your profile</p>
             <Link to="/login" >Login</Link>
         </div>
