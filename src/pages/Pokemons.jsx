@@ -33,9 +33,10 @@ const Pokemons = () => {
 
   return (
     <div className="app_contaner">
-      <h2>Pokemon Evolution</h2>
+      <h1>Pokemon Evolution</h1>
       <div className="center_pokemons">
         <div className="all_container">
+
           {allPokemons.map((pokemonStats, index) => (
             <div className="render_card_pokemon" key={pokemonStats.name}>
               <h3>{pokemonStats.name}</h3>
@@ -50,6 +51,7 @@ const Pokemons = () => {
               <Link to={`/pokemon/${pokemonStats.name}`}>view info ...</Link>
             </div>
           ))}
+
         </div>
       </div>
       <button className="load_more" onClick={() => getAllPokemons()}>
