@@ -2,7 +2,7 @@ const UserRender = ({ user,src }) => {
   return (
     <>
     <img src={src} alt="user poker api " />
-    <h1>{user.name}</h1>
+    <h2>{user.name}</h2>
     <p>{user.email}</p>
     
     </>

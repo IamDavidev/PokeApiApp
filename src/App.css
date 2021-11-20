@@ -2,7 +2,7 @@
   text-align: center;
   font-size: calc(10px + 2vmin);
   min-height: 100vh;
-  background-color: #000000;
+  background-color: #1a1919;
 }
 
 /* GLOBALS */
@@ -122,7 +122,7 @@ em{
 /* NAVBAR */
 .nav {
   position: relative;
-  background: #141414;
+  background: #00101b;
   color: #0ff
 }
 
@@ -165,6 +165,18 @@ li {
   text-decoration: none;
   margin: 3px;
 }
+.btn_primary{
+  color:rgb(0, 0, 0);
+  background-color: #709ada;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  margin:3px;
+  /* cursor: pointer; */
+
+}
+/* pokemons  */
 
 .center_pokemons {
   width: 100%;
@@ -223,7 +235,7 @@ li {
   height: 100%;
 }
 .berrie{
-  border:1px solid rgb(255, 255, 255);
+  border:2px solid #709ada;
   margin:10px 
 }
 /* DESKTOP */
