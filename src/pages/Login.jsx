@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import LoginTitle from '../components/LoginTitle';
 import UserContext from '../Context/UserContext';
 import { useContext } from 'react';
+import Logout from '../components/Logout.jsx';
 const Login = () => {
   const {user, setUser} = useContext(UserContext);
   console.log(user);
@@ -27,7 +28,7 @@ const Login = () => {
         </Link>
       </div> 
     </>
-      : <h1>Loading...</h1>
+      : <Logout />
 
       }
     </div>

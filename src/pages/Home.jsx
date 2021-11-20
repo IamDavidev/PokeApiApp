@@ -11,12 +11,13 @@ const Home = () => {
       <div className="container">
     <h1>Welcome {user.name}</h1> 
     <Link className='btn_all' to="/user">Profile</Link>
+    <br />
     <btn className='btn_all'  to="/logout">
       hola como estas {user.name}
     </btn>
   </div>
     ) 
-    : <NoUser title='HOME'/>
+    : <NoUser />
   );
 };
 

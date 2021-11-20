@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom"
-
+import {Link} from "react-router-dom"
 
 const NoUser = (props)=>{
     const handlepush = ()=>{
@@ -8,9 +8,9 @@ const NoUser = (props)=>{
     console.log(props);
     return (
         <div className="no-user">
-            <h1>{}</h1>
+            <h1>{'No user'}</h1>
             <p>Please login to view your profile</p>
-            <button onClick={handlepush}>Login</button>
+            <Link to="/login" >Login</Link>
         </div>
     )
 }
