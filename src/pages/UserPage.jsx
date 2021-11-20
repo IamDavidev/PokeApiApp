@@ -1,20 +1,13 @@
 import { useContext } from 'react';
-import UserContext from '../Context/UserContext'
-
+import UserContext from '../Context/UserContext';
+import UserRender from '../components/UserRender';
+import NoUser from '../components/NoUser';
 const UserPage = () => {
-  const {user,setUser} = useContext(UserContext) || 'hola'
-  // console.log(user);
+  const { user, setUser } = useContext(UserContext) || 'hola';
+  console.log(user);
   return (
-    <div>
-     {
-       
-         (user === null) ? <h1>No user</h1>
-          : <h1>userk</h1>
-        
-     }
-    </div>
+    <div>{user.name === '' ? <NoUser /> : <UserRender user={user} />}</div>
   );
 };
-
 
 export default UserPage;

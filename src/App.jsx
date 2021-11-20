@@ -2,15 +2,9 @@ import { useState } from 'react';
 import './App.css';
 import UserContext from './Context/UserContext';
 import LoginRoute from './routes/LoginRoute';
-// import AppRoute from './routes/AppRoute'
+import StateInitial from './helpers/StateInitial';
 function App() {
-  const [stateInitial, setStateInitial] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    isLoggedIn: false,
-  });
+  const [stateInitial, setStateInitial] = useState(StateInitial);
   return (
     <UserContext.Provider
       value={{ user: stateInitial, setUser: setStateInitial }}
