@@ -8,17 +8,32 @@ const Home = () => {
 
   return (
     <>
-    <h1> HOME </h1>
+      <h1> HOME </h1>
       {user.name !== '' ? (
         <div className="container">
           <h2>Welcome {user.name}</h2>
-          <Link className="btn_all" to="/user">
-            Profile
-          </Link>
-          <br />
-          <btn className="btn_all" to="/logout">
-            hola como estas {user.name}
-          </btn>
+          <ol>
+            <li>
+              <Link className="btn_all" to="/user">
+                Profile
+              </Link>
+            </li>
+            <li>
+              <Link className="btn_all" to="/user">
+                Logout
+              </Link>
+            </li>
+            <li>
+              <Link className="btn_all" to="/user">
+                berries
+              </Link>
+            </li>
+            <li>
+              <Link className="btn_all" to="/user">
+                Logout
+              </Link>
+            </li>
+          </ol>
         </div>
       ) : (
         <NoUser />
