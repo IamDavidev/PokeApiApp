@@ -4,23 +4,25 @@ import InputLogin from '../components/InputLogin';
 import { useContext } from 'react';
 import UserContext from '../Context/UserContext';
 import {useHistory} from 'react-router-dom'
+import handleLogin from '../helpers/handleLogin'
 const SignUp = () => {
   const { user, setUser } = useContext(UserContext);
   const History = useHistory();
   const HandleLogin = (evt) => {
     evt.preventDefault();
-    const name = evt.target.elements[0].value;
-    const email = evt.target.elements[1].value;
-    const password = evt.target.elements[2].value;
-    const userProfile = {
-      name,
-      email,
-      password,
-      confirmPassword: password,
-      isLoggedIn: true,
-    };
-    setUser(userProfile);
-    History.push('/home');
+    // const name = evt.target.elements[0].value;
+    // const email = evt.target.elements[1].value;
+    // const password = evt.target.elements[2].value;
+    // const userProfile = {
+    //   name,
+    //   email,
+    //   password,
+    //   confirmPassword: password,
+    //   isLoggedIn: true,
+    // };
+    // setUser(userProfile);
+    handleLogin({evt:evt,setUser:setUser,History:History});
+    // History.push('/home');
   };
   console.log(user.name);
   return (

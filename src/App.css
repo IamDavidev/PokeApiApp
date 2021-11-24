@@ -122,8 +122,6 @@ em{
 
 /* NAVBAR */
 .nav {
-  position: relative;
-  /* background: #43494d; */
 /* background: scroll; */
 /* background-attachment: unset; */
   background-color: #041f2e;  
@@ -131,15 +129,16 @@ em{
 }
 
 .nav__container {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   align-items: center;
   width: 100%;
-  height: 50px;
+  /* height: 50px; */
 }
 
 .nav__logo {
-  width: 50px
+  width: 50px;
+  display:inline-block;
 }
 
 .container__links {
@@ -152,20 +151,21 @@ em{
   display: block;
   color:#000;
   font-weight: bold;
-  
+  padding:10px;
+  margin:3px;  
 }
 /* pokemons */
 
 .pokemons_links {
   display: flex;
-  width: 30%;
+  width: 70%;
   justify-content: space-around;
   color: #0ff
 }
 
 
 .login_link {
-  width: 60%;
+  width: 30%;
   display: flex;
   justify-content: flex-end;
 }
@@ -183,8 +183,9 @@ li {
   border-radius: 10px;
   border: none;
   padding: 10px;
-  font-weight: bold;
+  font-weight:bolder;
   margin:3px;
+
   /* cursor: pointer; */
 
 }
@@ -242,13 +243,20 @@ li {
 /* render berries  */
 .render_berries {
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  width: 100%;
-  height: 100%;
+  grid-template-columns: 1fr;
+  /* width: 100%; */
+  /* height: 100%; */
+  margin:30px;
 }
 .berrie{
   border:2px solid #709ada;
   margin:10px 
+}
+.btn_berries_more{
+  padding:10px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
 }
 /* DESKTOP */
 
@@ -352,9 +360,23 @@ li {
     align-items: center;
     flex-direction: column;
   }
-
+  .logout{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:#000;
+    font-weight: bold;
+  }
   .all_container {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .render_berries{
+    display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }

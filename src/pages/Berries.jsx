@@ -40,12 +40,8 @@ const Berries = () => {
           {allBerries.map((berry) => (
             <div className="berrie" key={berry.id}>
               <h2>{berry.name}</h2>
-              <p>power :  
-                <small>
-                { '' + berry.natural_gift_power}
-
-                </small>
-              
+              <p>
+                power :<small>{'' + berry.natural_gift_power}</small>
               </p>
               <h3>flavor : </h3>
               <em>{berry.flavors[0].flavor.name}</em>
@@ -56,6 +52,9 @@ const Berries = () => {
               <p>{berry.natural_gift_type.name} </p>
             </div>
           ))}
+        </div>
+        <div className="btn_berries_more">
+        <button className="btn_all ">hola render mas berries</button>
         </div>
       </div>
     </div>
