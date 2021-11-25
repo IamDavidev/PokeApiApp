@@ -2,11 +2,11 @@ import InputLogin from '../components/InputLogin';
 import { Link } from 'react-router-dom';
 import LoginTitle from '../components/LoginTitle';
 import UserContext from '../Context/UserContext';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import Logout from '../components/Logout.jsx';
 const Login = () => {
   const {user, setUser} = useContext(UserContext);
-  console.log(user);
+  // console.log(user);
   return (
     <div className="login_page">
       <div className="loger_title">

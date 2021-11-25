@@ -14,6 +14,7 @@ const handleLogin = ({ evt,setUser,History }) => {
     password,
     isLoggedIn: true,
   };
+  localStorage.setItem("AuthUser",JSON.stringify(userProfile))
   setUser(userProfile);
   History.push('/home');
 };

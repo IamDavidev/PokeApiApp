@@ -3,7 +3,7 @@ import { useEffect,useState } from 'react';
 const useBerries = () => {
     const [berries, setBerries] = useState([]);
     useEffect(()=>{
-        console.log(GetBerries);
+        // console.log(GetBerries);
     })
 };
 

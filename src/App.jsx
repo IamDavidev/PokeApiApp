@@ -1,10 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import UserContext from './Context/UserContext';
 import LoginRoute from './routes/LoginRoute';
 import StateInitial from './helpers/StateInitial';
+import setUserStorage from './helpers/setUserStorage';
+
 function App() {
   const [stateInitial, setStateInitial] = useState(StateInitial);
+  useEffect(()=>{
+    setUserStorage();
+  })
+
   return (
     <UserContext.Provider
       value={{ user: stateInitial, setUser: setStateInitial }}

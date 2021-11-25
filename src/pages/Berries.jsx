@@ -17,10 +17,10 @@ const Berries = () => {
       berries.forEach(async (berry) => {
         const response = await fetch(berry.url);
         const data = await response.json();
-        console.log(berry.url);
+        // console.log(berry.url);
         setAllBerries((prevBerries) => [...prevBerries, data]);
         await allBerries.sort((a, b) => a.id - b.id);
-        await console.log(allBerries);
+        // await console.log(allBerries);
       });
     }
     createBerries(data.results);
@@ -29,7 +29,7 @@ const Berries = () => {
 
   useEffect(() => {
     getAllBerries();
-    console.log(allBerries);
+    // console.log(allBerries);
   }, []);
 
   return (

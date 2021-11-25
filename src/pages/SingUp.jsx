@@ -10,21 +10,10 @@ const SignUp = () => {
   const History = useHistory();
   const HandleLogin = (evt) => {
     evt.preventDefault();
-    // const name = evt.target.elements[0].value;
-    // const email = evt.target.elements[1].value;
-    // const password = evt.target.elements[2].value;
-    // const userProfile = {
-    //   name,
-    //   email,
-    //   password,
-    //   confirmPassword: password,
-    //   isLoggedIn: true,
-    // };
-    // setUser(userProfile);
     handleLogin({evt:evt,setUser:setUser,History:History});
-    // History.push('/home');
+
   };
-  console.log(user.name);
+  // console.log(user.name);
   return (
     <div className="singup_page">
       <LoginTitle title="sing up" />
