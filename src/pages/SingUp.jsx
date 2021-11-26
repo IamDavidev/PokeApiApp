@@ -19,7 +19,7 @@ const SignUp = () => {
   return (
     <div className="singup_page">
       <LoginTitle title="sing up" />
-      {user.name === '' ? (
+      {user.isLoggedIn === false ? (
         <>
           <div className="signup_page_container">
             <form onSubmit={HandleLogin}>

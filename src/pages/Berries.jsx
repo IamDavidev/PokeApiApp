@@ -54,7 +54,7 @@ const Berries = () => {
           ))}
         </div>
         <div className="btn_berries_more">
-        <button className="btn_all ">hola render mas berries</button>
+        <button className="btn_all" onClick={()=> getAllBerries()}> More Berries </button>
         </div>
       </div>
     </div>
