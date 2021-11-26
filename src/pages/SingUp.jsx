@@ -30,7 +30,7 @@ const SignUp = () => {
             </form>
           </div>
           <div className="account_created">
-            <Link className="btn_login" to="/logout">
+            <Link className="btn_login" to="/logged">
               Login
             </Link>
           </div>

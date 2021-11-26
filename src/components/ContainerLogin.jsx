@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import InputLogin from "./InputLogin";
+
 const ContainerLogin = ()=>{
 
     return (
@@ -7,7 +10,7 @@ const ContainerLogin = ()=>{
           <InputLogin type="password" pholder="PASSWORD" />
         </div>
         <div className="login_create">
-          <Link to='/home' className="btn_login">
+          <Link to='/login' className="btn_login">
             LOGIN
           </Link>
           <Link to="/singup" className="btn_login">
