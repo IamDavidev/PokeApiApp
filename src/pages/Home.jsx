@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <h1> HOME </h1>
-      {user.name !== '' ? <ContainerHome user={user} /> : <NoUser />}
+      {user.isLoggedIn === true ? <ContainerHome user={user} /> : <NoUser />}
     </>
   );
 };

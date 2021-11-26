@@ -1,7 +1,10 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect, useContext } from 'react';
+import NoUser from '../components/NoUser';
+import PokemonsList from '../components/PokemonsList';
+import UserContext from '../Context/UserContext';
 
 const Pokemons = () => {
+  const { user, setUser } = useContext(UserContext);
   const [allPokemons, setAllPokemons] = useState([]);
   const [loadMore, setLoadMore] = useState(
     'https://pokeapi.co/api/v2/pokemon?limit=10'
@@ -35,31 +38,23 @@ const Pokemons = () => {
   }, []);
 
   return (
-    <div className="app_contaner">
-      <h1>Pokemon Evolution</h1>
-      <div className="center_pokemons">
-        <div className="all_container">
-          {allPokemons.map((pokemonStats, index) => (
-            <div className="render_card_pokemon" key={pokemonStats.name}>
-              <h3>{pokemonStats.name}</h3>
-              <div className="card_container_img">
-                <img
-                  loading="lazy"
-                  className="img_pokemon"
-                  src={pokemonStats.sprites.other.dream_world.front_default}
-                  alt={pokemonStats.name}
-                />
-                <time>{pokemonStats.base_experience}</time>
-              </div>
-              <Link to={`/pokemon/${pokemonStats.name}`}>view info ...</Link>
+    <>
+      {user.isLoggedIn === true ? (
+        <div className="app_contaner">
+          <h1>Pokemon Evolution</h1>
+          <div className="center_pokemons">
+            <div className="all_container">
+              <PokemonsList pokemons={allPokemons} />
             </div>
-          ))}
+          </div>
+          <button className="load_more" onClick={() => getAllPokemons()}>
+            Load more
+          </button>
         </div>
-      </div>
-      <button className="load_more" onClick={() => getAllPokemons()}>
-        Load more
-      </button>
-    </div>
+      ) : (
+        <NoUser />
+      )}
+    </>
   );
 };
 
