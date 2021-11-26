@@ -1,5 +1,4 @@
 const BerriesList = ({berries}) => {
-console.log(berries);
 
 return (
     <>

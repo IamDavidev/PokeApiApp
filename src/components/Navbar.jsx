@@ -22,7 +22,7 @@ const Navbar = () => {
             <NavLink to="/pokemons">Pokemons</NavLink>
 
             <NavLink to="/berries">Berries</NavLink>
-            <Link to="/user">USER</Link>
+            <Link to="/user">User</Link>
           </div>
           <div className="login_link">
             {user.isLoggedIn ? (
