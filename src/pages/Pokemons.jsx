@@ -44,6 +44,7 @@ const Pokemons = () => {
               <h3>{pokemonStats.name}</h3>
               <div className="card_container_img">
                 <img
+                  loading="lazy"
                   className="img_pokemon"
                   src={pokemonStats.sprites.other.dream_world.front_default}
                   alt={pokemonStats.name}

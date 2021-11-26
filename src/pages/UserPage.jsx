@@ -15,7 +15,7 @@ const UserPage = () => {
   return (
     <div>
       <h1> UserPage </h1>
-      {user.name === '' ? <NoUser /> : <UserRender user={user} src={srcUser} />}
+      {user.isLoggedIn ===  false  ? <NoUser /> : <UserRender user={user} src={srcUser} />}
     </div>
   );
 };

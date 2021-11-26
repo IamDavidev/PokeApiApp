@@ -1,19 +1,22 @@
+import { useContext, lazy, Suspense } from 'react';
 import { Route, Switch, Redirect, useHistory } from 'react-router-dom';
-import Login from '../pages/Login';
-import Home from '../pages/Home';
-import Navbar from '../components/Navbar';
-import PokemonScreen from '../pages/PokemonScreen';
-import Berries from '../pages/Berries';
-import Pokemons from '../pages/Pokemons';
-import UserPage from '../pages/UserPage';
-import { useContext } from 'react';
 import UserContext from '../Context/UserContext';
+import Loading from '../components/Loading';
+
+const Login = lazy(() => import('../pages/Login'));
+const Home = lazy(() => import('../pages/Home'));
+const Navbar = lazy(() => import('../components/Navbar'));
+const PokemonScreen = lazy(() => import('../pages/PokemonScreen'));
+const Berries = lazy(() => import('../pages/Berries'));
+const Pokemons = lazy(() => import('../pages/Pokemons'));
+const UserPage = lazy(() => import('../pages/UserPage'));
+
 const AppRoute = () => {
   const { user, setUser } = useContext(UserContext);
 
   const history = useHistory();
   return (
-    <>
+    <Suspense fallback={<Loading />}>
       <Navbar />
       <Switch>
         <Route exact path="/home" component={Home} />
@@ -28,9 +31,8 @@ const AppRoute = () => {
         ) : (
           <Redirect to="/login" />
         )}
-        
       </Switch>
-    </>
+    </Suspense>
   );
 };
 
