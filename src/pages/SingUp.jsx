@@ -7,13 +7,15 @@ import {useHistory} from 'react-router-dom'
 import handleLogin from '../helpers/handleLogin'
 const SignUp = () => {
   const { user, setUser } = useContext(UserContext);
+
   const History = useHistory();
+
   const HandleLogin = (evt) => {
     evt.preventDefault();
     handleLogin({evt:evt,setUser:setUser,History:History});
 
   };
-  // console.log(user.name);
+  
   return (
     <div className="singup_page">
       <LoginTitle title="sing up" />
@@ -35,7 +37,7 @@ const SignUp = () => {
         </>
       ) : (
         <div className="signup_page_container">
-          <h1>hola xdxd</h1>
+          <h1>is logged {user.name}</h1>
         </div>
       )}
     </div>

@@ -6,15 +6,14 @@ import PokemonScreen from '../pages/PokemonScreen';
 import Berries from '../pages/Berries';
 import Pokemons from '../pages/Pokemons';
 import UserPage from '../pages/UserPage';
+import { useContext } from 'react';
+import UserContext from '../Context/UserContext';
 const AppRoute = () => {
+  const { user, setUser } = useContext(UserContext);
 
-
-  const history= useHistory()
+  const history = useHistory();
   return (
     <>
-      {/* {
-        history.location.pathname !== '/login'  ?<Navbar /> : null
-      } */}
       <Navbar />
       <Switch>
         <Route exact path="/home" component={Home} />
@@ -23,7 +22,13 @@ const AppRoute = () => {
         <Route exact path="/user" component={UserPage} />
         <Route exact path="/pokemon/:id" component={PokemonScreen} />
         <Route exact path="/logged" component={Login} />
-        <Redirect to="/login" />
+
+        {user.isLoggedIn === true ? (
+          <Redirect to="/home" />
+        ) : (
+          <Redirect to="/login" />
+        )}
+        
       </Switch>
     </>
   );

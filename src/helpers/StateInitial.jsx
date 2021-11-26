@@ -3,7 +3,7 @@ const StateInitial =()=> {
         name: '',
         email:'',
         password:'',
-        isLogged: false,
+        isLoggedIn: false,
     }
     const user = JSON.parse(localStorage.getItem('AuthUser'))
     if(user) return user

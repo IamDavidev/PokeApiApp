@@ -5,7 +5,7 @@ const NoUser = (props)=>{
     const handlepush = ()=>{
        useHistory().push("/login")
     }
-    // console.log(props);
+
     return (
         <div className="no_user_cmt">
             <h2>{'No user'}</h2>
