@@ -7,7 +7,7 @@ const NoUser = (props)=>{
     }
     // console.log(props);
     return (
-        <div className="no-user">
+        <div className="no_user_cmt">
             <h2>{'No user'}</h2>
             <p>Please login to view your profile</p>
             <Link to="/login" >Login</Link>

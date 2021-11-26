@@ -18,15 +18,18 @@ const Pokemons = () => {
         const res = await fetch(
           `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
         );
+
         const data = await res.json();
+
         setAllPokemons((currentList) => [...currentList, data]);
+
         await allPokemons.sort((a, b) => a.id - b.id);
       });
     }
+
     createPokemonObject(data.results);
   };
-  // console.log(next);
-  // console.log(allPokemons);
+
   useEffect(() => {
     getAllPokemons();
   }, []);
@@ -36,7 +39,6 @@ const Pokemons = () => {
       <h1>Pokemon Evolution</h1>
       <div className="center_pokemons">
         <div className="all_container">
-
           {allPokemons.map((pokemonStats, index) => (
             <div className="render_card_pokemon" key={pokemonStats.name}>
               <h3>{pokemonStats.name}</h3>
@@ -51,7 +53,6 @@ const Pokemons = () => {
               <Link to={`/pokemon/${pokemonStats.name}`}>view info ...</Link>
             </div>
           ))}
-
         </div>
       </div>
       <button className="load_more" onClick={() => getAllPokemons()}>

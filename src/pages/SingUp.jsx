@@ -24,7 +24,7 @@ const SignUp = () => {
               <InputLogin id="name" type="text" pholder="NAME" />
               <InputLogin id="email" type="email" pholder="EMAIL" />
               <InputLogin id="password" type="password" pholder="PASSWORD" />
-              <button className="btn_login">CREATE ACCOUNT</button>
+              <button className="btn_create_user">CREATE ACCOUNT</button>
             </form>
           </div>
           <div className="account_created">

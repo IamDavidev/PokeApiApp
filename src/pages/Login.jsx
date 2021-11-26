@@ -6,14 +6,14 @@ import { useContext, useEffect } from 'react';
 import Logout from '../components/Logout.jsx';
 const Login = () => {
   const {user, setUser} = useContext(UserContext);
-  // console.log(user);
+  console.log(user);
   return (
     <div className="login_page">
       <div className="loger_title">
       <LoginTitle title="app react"/>
       </div>
       {
-        user.name === '' ? 
+        user.isLoggedIN !== true ? 
         <>
       <div className="login_container">
         <InputLogin type="email" pholder="EMAIL" />

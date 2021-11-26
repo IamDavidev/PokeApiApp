@@ -7,15 +7,7 @@ import setUserStorage from './helpers/setUserStorage';
 
 function App() {
   const [stateInitial, setStateInitial] = useState(StateInitial);
-  useEffect(() => {
-    function authUser() {
-      const user = JSNON.parse(localStorage.getItem('authUser'));
-      if (user) {
-        setStateInitial(user);
-      }
-    }
-  });
-
+console.log(stateInitial);
   return (
     <UserContext.Provider
       value={{ user: stateInitial, setUser: setStateInitial }}

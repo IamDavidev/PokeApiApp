@@ -8,7 +8,7 @@
 /* GLOBALS */
 a {
   text-decoration: none;
-  color: rgb(0, 255, 255);
+  color: rgb(0, 0, 0);
 }
 h1{
   color: rgb(0, 255, 255);
@@ -76,14 +76,13 @@ em{
 }
 
 .btn_login {
-  color: rgb(0, 0, 0);
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px solid rgb(0, 0, 0);
-  cursor: pointer;
+  background:transparent;
+  color:  #030303;
+  border-radius: 15px;
+  padding:15px;
   font-weight: bold;
+  margin-top: 5px;
+  border-bottom: 2px solid #05bddd;
 }
 
 /* singup */
@@ -105,26 +104,26 @@ em{
 .input_signup::placeholder {
   color: rgb(0, 26, 255);
 }
-
-.btn_login {
-  display: block;
-  background: fixed;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.btn_create_user{
+  color:#fcfcfc;
+  background:transparent;
+  font-size:23px;
   border-radius: 10px;
-  padding: 10px;
+  border:none;
+  padding:15px;
   font-weight: bold;
-  font-size: calc(10px + 2vmin);
-  color: rgb(0, 0, 0);
-  border: none;
-  border-bottom: 3px solid rgb(255, 255, 255);
+  margin-top: 10px;
+  border-bottom: 2px solid #05bddd;
 }
+
+/* 
+
 
 /* NAVBAR */
 .nav {
 /* background: scroll; */
 /* background-attachment: unset; */
-  background-color: #041f2e;  
+  background-color: #05bddd;  
   color: rgb(0, 0, 0)
 }
 
@@ -154,8 +153,15 @@ em{
   padding:10px;
   margin:3px;  
 }
-/* pokemons */
+/* no user page */
+.no_user_cmt{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction:column;
+}
 
+/* pokemons */
 .pokemons_links {
   display: flex;
   width: 70%;
@@ -300,11 +306,6 @@ li {
     grid-row-start: 3;
     color: rgb(0, 0, 0);
     margin-top: auto;
-  }
-
-  .btn_login {
-    width: 200px;
-    display: block;
   }
 
   .signup_page_container {

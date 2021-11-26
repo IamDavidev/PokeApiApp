@@ -5,11 +5,11 @@ import StateInitial from '../helpers/StateInitial';
 const Logout = () => {
   const { user, setUser } = useContext(UserContext);
   const history = useHistory();
+  
   const handleLogout = () => {
-    // localStorage.removeItem('token');
-    // window.location.href = '/';
+    localStorage.removeItem('AuthUser');
     setUser(StateInitial);
-    history.push('/');
+    history.push('/login');
   };
 
   return(

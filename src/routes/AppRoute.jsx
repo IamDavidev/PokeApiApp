@@ -1,4 +1,4 @@
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, useHistory } from 'react-router-dom';
 import Login from '../pages/Login';
 import Home from '../pages/Home';
 import Navbar from '../components/Navbar';
@@ -7,8 +7,14 @@ import Berries from '../pages/Berries';
 import Pokemons from '../pages/Pokemons';
 import UserPage from '../pages/UserPage';
 const AppRoute = () => {
+
+
+  const history= useHistory()
   return (
     <>
+      {/* {
+        history.location.pathname !== '/login'  ?<Navbar /> : null
+      } */}
       <Navbar />
       <Switch>
         <Route exact path="/home" component={Home} />
