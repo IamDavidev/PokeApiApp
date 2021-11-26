@@ -18,7 +18,7 @@ const SignUp = () => {
   
   return (
     <div className="singup_page">
-      <LoginTitle title="sing up" />
+      <LoginTitle title="sign up" />
       {user.isLoggedIn === false ? (
         <>
           <div className="signup_page_container">

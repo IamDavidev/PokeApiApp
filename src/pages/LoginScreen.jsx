@@ -7,7 +7,7 @@ const LoginScreen = () => {
       <LoginTitle title='Login'  />
       <div className="render_login_container">
         <Link className="btn_login" to="/singup">
-          Sing up
+          Sign up
         </Link>
         <Link className="btn_login" to="/logged">
           Login
@@ -16,7 +16,7 @@ const LoginScreen = () => {
       <div className='footer_login'>
         <p>
           © 2020 Copyright:{' '}
-          <a href="https://github.com/L-David-T" target='_blanck'>David Lezama</a>
+          <a href="https://github.com/L-Davidev" target='_blanck'>David Lezama</a>
         </p>
       </div>
     </div>
